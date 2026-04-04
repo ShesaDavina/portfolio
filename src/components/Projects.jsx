@@ -7,47 +7,47 @@ export default function ProjectsComp() {
     {
       title: 'Athletica',
       desc: 'Website booking kelas gym khusus wanita',
-      image: '/src/assets/athletica.png'
+      image: '/public/images/athletica.png'
     },
     {
       title: 'BookKu',
       desc: 'Website E-Commerce buku',
-      image: '/src/assets/bookku.png'
+      image: '/public/images/bookku.png'
     },
     {
       title: 'HearMeOut',
       desc: 'Design website aspirasi siswa',
-      image: '/src/assets/hearmeout.png'
+      image: '/public/images/hearmeout.png'
     },
     {
       title: 'NIKE E-Commerce',
       desc: 'Design UI/UX toko online sepatu NIKE',
-      image: '/src/assets/nike.png'
+      image: '/public/images/nike.png'
     },
     {
       title: 'BuTi (Buah Hati)',
       desc: 'Design UI/UX aplikasi untuk Ibu',
-      image: '/src/assets/buti.PNG'
+      image: '/public/images/buti.PNG'
     },
     {
       title: 'Mengenal Fauna',
       desc: 'Website untuk mengenal fauna di Taman Safari Bogor',
-      image: '/src/assets/fauna.png'
+      image: '/public/images/fauna.png'
     },
     {
       title: 'Kalkulator',
       desc: 'Website kalkulator sederhana, geometri dan aritmatika',
-      image: '/src/assets/kalku.png'
+      image: '/public/images/kalku.png'
     },
     {
       title: 'Kalkulator Emisi Karbon',
       desc: 'Website untuk menghitung emisi karbon',
-      image: '/src/assets/karbon.png'
+      image: '/public/images/karbon.png'
     },
     {
       title: 'Artikel 3R',
       desc: 'Project pertama saya membuat wbsite',
-      image: '/src/assets/3r.png'
+      image: '/public/images/3r.png'
     },
 
   ];

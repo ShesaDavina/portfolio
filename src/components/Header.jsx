@@ -29,7 +29,6 @@ export default function HeaderComp() {
         <HiOutlineBars3 className="h-5 w-5" />
       </NavbarToggle>
       
-      {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-6 ml-10">
         {menuItems.map((section) => (
           <button
@@ -42,7 +41,6 @@ export default function HeaderComp() {
         ))}
       </div>
 
-      {/* Mobile Menu */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200`}>
         <div className="px-4 py-4 space-y-2">
           {menuItems.map((section) => (
