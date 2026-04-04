@@ -7,47 +7,47 @@ export default function ProjectsComp() {
     {
       title: 'Athletica',
       desc: 'Website booking kelas gym khusus wanita',
-      image: '/public/images/athletica.png'
+      image: '/images/athletica.png'
     },
     {
       title: 'BookKu',
       desc: 'Website E-Commerce buku',
-      image: '/public/images/bookku.png'
+      image: '/images/bookku.png'
     },
     {
       title: 'HearMeOut',
       desc: 'Design website aspirasi siswa',
-      image: '/public/images/hearmeout.png'
+      image: '/images/hearmeout.png'
     },
     {
       title: 'NIKE E-Commerce',
       desc: 'Design UI/UX toko online sepatu NIKE',
-      image: '/public/images/nike.png'
+      image: '/images/nike.png'
     },
     {
       title: 'BuTi (Buah Hati)',
       desc: 'Design UI/UX aplikasi untuk Ibu',
-      image: '/public/images/buti.PNG'
+      image: '/images/buti.png'
     },
     {
       title: 'Mengenal Fauna',
       desc: 'Website untuk mengenal fauna di Taman Safari Bogor',
-      image: '/public/images/fauna.png'
+      image: '/images/fauna.png'
     },
     {
       title: 'Kalkulator',
       desc: 'Website kalkulator sederhana, geometri dan aritmatika',
-      image: '/public/images/kalku.png'
+      image: '/images/kalku.png'
     },
     {
       title: 'Kalkulator Emisi Karbon',
       desc: 'Website untuk menghitung emisi karbon',
-      image: '/public/images/karbon.png'
+      image: '/images/karbon.png'
     },
     {
       title: 'Artikel 3R',
       desc: 'Project pertama saya membuat wbsite',
-      image: '/public/images/3r.png'
+      image: '/images/3r.png'
     },
 
   ];

@@ -32,7 +32,7 @@ export default function HeroComp() {
           <div className="relative">
             <div className="relative z-10">
               <img 
-                src="/public/images/me.jpeg"
+                src="/images/me.jpeg"
                 alt="Shesa Davina Putri"
                 className="w-full h-96 md:h-[500px] object-cover rounded-3xl shadow-2xl border-8 border-white/50 mx-auto"
               />
