@@ -1,102 +1,224 @@
-import {
-  FaLinkedin
-} from "react-icons/fa";
+import { useState } from "react";
+import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaFigma } from "react-icons/fa";
 
-export default function ProjectsComp() {
-  const projects = [
-    {
-      title: 'Athletica',
-      desc: 'Website booking kelas gym khusus wanita',
-      image: '/images/athletica.png'
-    },
-    {
-      title: 'BookKu',
-      desc: 'Website E-Commerce buku',
-      image: '/images/bookku.png'
-    },
-    {
-      title: 'HearMeOut',
-      desc: 'Design website aspirasi siswa',
-      image: '/images/hearmeout.png'
-    },
-    {
-      title: 'NIKE E-Commerce',
-      desc: 'Design UI/UX toko online sepatu NIKE',
-      image: '/images/nike.png'
-    },
-    {
-      title: 'BuTi (Buah Hati)',
-      desc: 'Design UI/UX aplikasi untuk Ibu',
-      image: '/images/buti.png'
-    },
-    {
-      title: 'Mengenal Fauna',
-      desc: 'Website untuk mengenal fauna di Taman Safari Bogor',
-      image: '/images/fauna.png'
-    },
-    {
-      title: 'Kalkulator',
-      desc: 'Website kalkulator sederhana, geometri dan aritmatika',
-      image: '/images/kalku.png'
-    },
-    {
-      title: 'Kalkulator Emisi Karbon',
-      desc: 'Website untuk menghitung emisi karbon',
-      image: '/images/karbon.png'
-    },
-    {
-      title: 'Artikel 3R',
-      desc: 'Project pertama saya membuat wbsite',
-      image: '/images/3r.png'
-    },
+const projects = [
+  {
+    title: 'FoodWise',
+    desc: 'Pencatatan & pengingat makanan agar tidak terbuang percuma',
+    year: '2026',
+    tech: ['React', 'Tailwind', 'Laravel', 'MySQL'],
+    image: '/images/projects/foodwise.png',
+    github: 'https://github.com/ShesaDavina',
+    live: '#'
+  },
+  {
+    title: 'Athletica',
+    desc: 'Booking kelas gym wanita',
+    year: '2025',
+    tech: ['Laravel', 'Bootstrap', 'MySQL'],
+    image: '/images/projects/athletica.png',
+    github: 'https://github.com/ShesaDavina',
+    live: '#'
+  },
+  {
+    title: 'BookKu',
+    desc: 'E-commerce buku online',
+    year: '2026',
+    tech: ['React', 'Vite', 'Tailwind'],
+    image: '/images/projects/bookku.png',
+    github: 'https://github.com/ShesaDavina',
+    live: '#'
+  },
+  {
+    title: 'HearMeOut',
+    desc: 'Aspirasi siswa',
+    year: '2026',
+    tech: ['Figma'],
+    image: '/images/projects/hearmeout.png',
+    github: '#',
+    live: 'https://www.figma.com/proto/nEgfBjq4DGM6kJGv86P1QT/HearMeOut---Aspirasi-Siswa?node-id=139-3&starting-point-node-id=139%3A3'
+  },
+  {
+    title: 'NIKE E-Commerce',
+    desc: 'UI/UX Nike',
+    year: '2025',
+    tech: ['Figma'],
+    image: '/images/projects/nike.png',
+    github: '#',
+    live: 'https://www.figma.com/proto/tw4KSjG0fP1D1LQ4l6K8Wg/NIKE?node-id=2-3&starting-point-node-id=115%3A11&t=Hd5WsQacnWYoABzJ-1'
+  },
+  {
+    title: 'BuTi (Buah Hati)',
+    desc: 'Tracking ibu hamil',
+    year: '2024',
+    tech: ['MockPlus'],
+    image: '/images/projects/buti.png',
+    github: '#',
+    live: 'https://rp.mockplus.com/rps/qjSRUR00cP/wSPeEiRG_v?'
+  },
+  {
+    title: 'Mengenal Fauna',
+    desc: 'Edukasi fauna',
+    year: '2024',
+    tech: ['HTML', 'CSS'],
+    image: '/images/projects/fauna.png',
+    github: 'https://github.com/ShesaDavina',
+    live: '#'
+  },
+];
 
-  ];
+export default function Projects({ isVisible }) {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
+  // Cek apakah project punya GitHub (bukan Figma)
+  const hasGithub = (project) => {
+    return project.github && project.github !== '#' && !project.tech.includes('Figma');
+  };
+
+  // Cek apakah project punya Live Demo
+  const hasLive = (project) => {
+    return project.live && project.live !== '#';
+  };
 
   return (
-    <section id="projects" className="py-10 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
-          Projects
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.desc}</p>
+    <section id="projects" className={`py-24 px-6 fade-in ${isVisible ? 'visible' : ''}`}>
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#e6f3ff' }}>
+            <FaFolderOpen style={{ color: '#355872' }} />
+            <span className="text-sm font-semibold" style={{ color: '#355872' }}>My Projects</span>
+          </div>
+          <h2 className="text-5xl font-black mb-4" style={{ color: '#355872' }}>Projects</h2>
+          <p className="text-xl" style={{ color: '#7AAACE' }}>Beberapa karya terbaik saya</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {displayedProjects.map(project => (
+            <div
+              key={project.id}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl border border-gray-100"
+            >
+              <div className="h-48 bg-gray-100 relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.src = 'https://via.placeholder.com/400x200?text=Project+Image';
+                  }}
+                />
+                <span
+                  className="absolute top-3 right-3 text-white text-xs px-2 py-1 rounded-full"
+                  style={{ backgroundColor: '#355872' }}
+                >
+                  {project.year}
+                </span>
+                {/* Badge Figma jika tech-nya Figma */}
+                {project.tech.includes('Figma') && (
+                  <span
+                    className="absolute bottom-3 right-3 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1"
+                    style={{ backgroundColor: '#7AAACE' }}
+                  >
+                    <FaFigma className="text-xs" />
+                    Figma
+                  </span>
+                )}
+              </div>
+              <div className="p-5">
+                <h3 className="text-xl font-bold mb-1" style={{ color: '#355872' }}>{project.title}</h3>
+                <p className="text-gray-600 text-sm mt-1">{project.desc}</p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {project.tech.map(tech => (
+                    <span
+                      key={tech}
+                      className="text-xs px-2 py-1 rounded-full"
+                      style={{ backgroundColor: '#e6f3ff', color: '#355872' }}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3 mt-4">
+                  {/* Tombol GitHub - hanya tampil jika project BUKAN Figma */}
+                  {hasGithub(project) && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="flex-1 text-center py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium"
+                      style={{ backgroundColor: '#355872', color: 'white' }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#7AAACE'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = '#355872'}
+                    >
+                      <FaGithub className="text-sm" />
+                      GitHub
+                    </a>
+                  )}
+
+                  {/* Tombol Live Demo - untuk Figma atau project dengan link live */}
+                  {hasLive(project) && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      className={`${!hasGithub(project) ? 'flex-1' : ''} py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium`}
+                      style={{
+                        backgroundColor: hasGithub(project) ? '#f0f0f0' : '#355872',
+                        color: hasGithub(project) ? '#355872' : 'white'
+                      }}
+                      onMouseEnter={(e) => {
+                        if (hasGithub(project)) {
+                          e.target.style.backgroundColor = '#e6f3ff';
+                          e.target.style.color = '#7AAACE';
+                        } else {
+                          e.target.style.backgroundColor = '#7AAACE';
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (hasGithub(project)) {
+                          e.target.style.backgroundColor = '#f0f0f0';
+                          e.target.style.color = '#355872';
+                        } else {
+                          e.target.style.backgroundColor = '#355872';
+                        }
+                      }}
+                    >
+                      <FaExternalLinkAlt className="text-sm" />
+                      {project.tech.includes('Figma') ? 'View Design' : 'Live Demo'}
+                    </a>
+                  )}
+
+                  {/* Jika tidak ada GitHub dan tidak ada Live, tampilkan pesan */}
+                  {!hasGithub(project) && !hasLive(project) && (
+                    <div className="flex-1 text-center py-2 rounded-lg text-sm" style={{ backgroundColor: '#f0f0f0', color: '#9CD5FF' }}>
+                      Coming Soon
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
-      <div className="max-w-6xl mx-auto py-20 px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Certificates
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            See all my certificates and achievements
-          </p>
-        </div>
 
-        <div className="flex justify-center">
-          <a
-            href="https://www.linkedin.com/in/shesa-davina-putri/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-800 hover:-translate-y-2 transition-all duration-300 border border-blue-600/50 hover:border-blue-500/80"
+        <div className="text-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-8 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+            style={{
+              backgroundColor: 'white',
+              color: '#355872',
+              border: `2px solid #7AAACE`
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = '#355872';
+              e.target.style.color = 'white';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = 'white';
+              e.target.style.color = '#355872';
+            }}
           >
-            <FaLinkedin className="text-2xl" />
-            <span>View on LinkedIn</span>
-            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+            {showAll ? "Show Less" : `View All (${projects.length} projects)`}
+          </button>
         </div>
       </div>
     </section>

@@ -1,34 +1,85 @@
-export default function SkillsComp() {
-  const skills = [
-    { name: 'React JS', level: 80 },
-    { name: 'Laravel', level: 80 },
-    { name: 'JavaScript', level: 70 },
-    { name: 'HTML/CSS', level: 80 },
-    { name: 'PHP', level: 70 },
-    { name: 'Phyton', level: 30 },
-    { name: 'Figma', level: 60 },
-    { name: 'Git/GitHub', level: 40 },
-  ];
+import { FaCode } from "react-icons/fa";
 
+const programmingSkills = [
+  { name: 'HTML', icon: '/images/skills/html.png' },
+  { name: 'CSS', icon: '/images/skills/css.png' },
+  { name: 'Laravel', icon: '/images/skills/laravel.png' },
+  { name: 'JavaScript', icon: '/images/skills/js.png' },
+  { name: 'React', icon: '/images/skills/react.png' },
+  { name: 'PHP', icon: '/images/skills/php.png' },
+  { name: 'Bootstrap', icon: '/images/skills/bs.png' },
+  { name: 'Tailwind CSS', icon: '/images/skills/tl.png' },
+];
+
+const toolsFrameworks = [
+  { name: 'Figma', icon: '/images/skills/figma.png' },
+  { name: 'Git', icon: '/images/skills/git.png' },
+  { name: 'GitHub', icon: '/images/skills/github.png' },
+  { name: 'Postman', icon: '/images/skills/postman.png' },
+  { name: 'MySQL', icon: '/images/skills/mysql.png' },
+];
+
+export default function Skills({ isVisible }) {
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
-          Skills
-        </h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {skills.map((skill, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">{skill.name}</h3>
-              <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
-                <div 
-                  className="bg-blue-600 h-3 rounded-full transition-all duration-1000"
-                  style={{ width: `${skill.level}%` }}
-                ></div>
+    <section id="skills" className={`py-20 px-6 fade-in ${isVisible ? 'visible' : ''}`}>
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#e6f3ff' }}>
+            <FaCode style={{ color: '#355872' }} />
+            <span className="text-sm font-semibold" style={{ color: '#355872' }}>My Skills</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black" style={{ color: '#355872' }}>Skills & Technologies</h2>
+        </div>
+
+        {/* Programming & Frameworks */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-center mb-8" style={{ color: '#7AAACE' }}>Programming & Frameworks</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {programmingSkills.map((skill, idx) => (
+              <div
+                key={idx}
+                className="relative w-24 h-24 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col items-center justify-center border border-gray-100 group"
+              >
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="w-12 h-12 object-contain mb-1 group-hover:scale-110 transition-transform"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+                <span className="text-xs text-gray-500 group-hover:text-blue-600 transition-colors">
+                  {skill.name}
+                </span>
               </div>
-              <span className="font-bold text-gray-900">{skill.level}%</span>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Tools & Libraries */}
+        <div>
+          <h3 className="text-2xl font-bold text-center mb-8" style={{ color: '#7AAACE' }}>Tools & Libraries</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {toolsFrameworks.map((skill, idx) => (
+              <div
+                key={idx}
+                className="relative w-24 h-24 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col items-center justify-center border border-gray-100 group"
+              >
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="w-12 h-12 object-contain mb-1 group-hover:scale-110 transition-transform"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+                <span className="text-xs text-gray-500 group-hover:text-blue-600 transition-colors">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
