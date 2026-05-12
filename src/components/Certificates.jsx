@@ -3,7 +3,20 @@ import { FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
 
 const certificates = [
     {
-        id: 1,
+        title: "Full-Stack Developer",
+        issuer: "Coding Camp powered by DBS Foundation",
+        date: "2026",
+        image: "/images/certificates/fs.png",
+        description: "Successfully completing Coding Camp 2026 powered by DBS Foundation, specializing in Full-Stack Web Developer",
+    },
+    {
+        title: "Mastering Your Digital Presence: A Guide to Strong Professional Branding",
+        issuer: "Coding Camp powered by DBS Foundation",
+        date: "2026",
+        image: "/images/certificates/dbswk.png",
+        description: "Coding Camp Workshop at SMK Wikrama Bogor",
+    },
+    {
         title: "Build with AI",
         issuer: "GDG Bogor",
         date: "2026",
@@ -11,7 +24,6 @@ const certificates = [
         description: "Mobile and Web Session",
     },
     {
-        id: 2,
         title: "Back-End with JavaScript",
         issuer: "Dicoding",
         date: "2026",
@@ -19,7 +31,6 @@ const certificates = [
         description: "Belajar Back-End Pemula dengan JavaScript",
     },
     {
-        id: 3,
         title: "React.JS",
         issuer: "Dicoding",
         date: "2026",
@@ -27,7 +38,6 @@ const certificates = [
         description: "Belajar Membuat Aplikasi Web dengan React",
     },
     {
-        id: 4,
         title: "Front-End Web",
         issuer: "Dicoding",
         date: "2026",
@@ -35,7 +45,6 @@ const certificates = [
         description: "Belajar Membuat Front-End Web untuk Pemula",
     },
     {
-        id: 5,
         title: "Cloud & Gen AI",
         issuer: "Dicoding",
         date: "2026",
@@ -43,7 +52,6 @@ const certificates = [
         description: "Belajar Dasar Cloud dan Gen AI di AWS",
     },
     {
-        id: 6,
         title: "Programming Logic 101",
         issuer: "Dicoding",
         date: "2026",
@@ -51,7 +59,6 @@ const certificates = [
         description: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
     },
     {
-        id: 7,
         title: "Software Developer",
         issuer: "Dicoding",
         date: "2026",
@@ -59,7 +66,6 @@ const certificates = [
         description: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
     },
     {
-        id: 8,
         title: "DevFest Bogor 2025",
         issuer: "GDG Bogor",
         date: "2025",
@@ -67,7 +73,6 @@ const certificates = [
         description: "Safer, Smarter, and Scalable with Cloud and Al",
     },
     {
-        id: 9,
         title: "Python",
         issuer: "Dicoding",
         date: "2025",
@@ -75,7 +80,6 @@ const certificates = [
         description: "Memulai Pemrograman dengan Python",
     },
     {
-        id: 10,
         title: "AI Basics",
         issuer: "Dicoding",
         date: "2025",
@@ -83,7 +87,6 @@ const certificates = [
         description: "Belajar Dasar AI",
     },
     {
-        id: 11,
         title: "Wordpress Introduction",
         issuer: "MySkill",
         date: "2025",
@@ -91,7 +94,6 @@ const certificates = [
         description: "Belajar Wordpress",
     },
     {
-        id: 12,
         title: "Programming Concepts",
         issuer: "Komdigi",
         date: "2025",
@@ -99,7 +101,6 @@ const certificates = [
         description: "Pelatihan Konsep Pemrograman",
     },
     {
-        id: 12,
         title: "Career Guidance For Aspiring Game Developer",
         issuer: "Komdigi",
         date: "2025",
@@ -107,7 +108,6 @@ const certificates = [
         description: "Seminar “Career Guidance For Aspiring Game Developer”",
     },
     {
-        id: 13,
         title: "JavaScript",
         issuer: "Dicoding",
         date: "2025",
@@ -115,7 +115,6 @@ const certificates = [
         description: "Belajar Dasar Pemrograman JavaScript",
     },
     {
-        id: 14,
         title: "Keselamatan dan Kesehatan Kerja",
         issuer: "Dicoding",
         date: "2024",
@@ -123,7 +122,6 @@ const certificates = [
         description: "e-learning 'Keselamatan dan Kesehatan Kerja'",
     },
     {
-        id: 15,
         title: "Web",
         issuer: "Dicoding",
         date: "2024",
@@ -131,7 +129,6 @@ const certificates = [
         description: "Belajar Dasar Pemrograman Web'",
     },
     {
-        id: 16,
         title: "Cyber Security and Soft Skill",
         issuer: "Telkom Indonesia",
         date: "2024",
@@ -155,7 +152,7 @@ export default function Certificates({ isVisible }) {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#e6f3ff' }}>
-                            <FaCertificate  style={{ color: '#355872' }} />
+                            <FaCertificate style={{ color: '#355872' }} />
                             <span className="text-sm font-semibold" style={{ color: '#355872' }}>My Achievements</span>
                         </div>
                         <h2

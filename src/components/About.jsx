@@ -21,7 +21,7 @@ export default function About({ isVisible }) {
         setCounters({
           experience: Math.min(Math.floor((step / steps) * 2), 2),
           projects: Math.min(Math.floor((step / steps) * 9), 9),
-          certificates: Math.min(Math.floor((step / steps) * 17), 17)
+          certificates: Math.min(Math.floor((step / steps) * 19), 19)
         });
 
         if (step >= steps) {
