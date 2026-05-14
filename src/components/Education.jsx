@@ -13,7 +13,7 @@ export default function Education({ isVisible }) {
       year: '2021 - 2024',
       title: 'SMPN 2 Cisarua',
       major: '-',
-      desc: 'Aktif dalam organisasi sekolah dan pengembangan soft skill.',
+      desc: 'Top 10 siswa berprestasi, aktif dalam kegiatan akademik',
       side: 'right'
     }
   ];

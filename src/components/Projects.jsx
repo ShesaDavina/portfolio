@@ -8,7 +8,7 @@ const projects = [
     year: '2026',
     tech: ['React', 'Tailwind', 'Laravel', 'MySQL'],
     image: '/images/projects/foodwise.png',
-    github: 'https://github.com/ShesaDavina',
+    github: 'https://github.com/ShesaDavina/foodwise-app.git',
     live: '#'
   },
   {
@@ -183,7 +183,7 @@ export default function Projects({ isVisible }) {
                       }}
                     >
                       <FaExternalLinkAlt className="text-sm" />
-                      {project.tech.includes('Figma') ? 'View Design' : 'Live Demo'}
+                      View Design
                     </a>
                   )}
 
