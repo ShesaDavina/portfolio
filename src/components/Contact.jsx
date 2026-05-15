@@ -3,7 +3,7 @@ import { Button, TextInput, Textarea } from "flowbite-react";
 import emailjs from '@emailjs/browser';
 import { FaRegEnvelope } from "react-icons/fa";
 
-export default function Contact() {
+export default function Contact({ isVisible }) {
   const form = useRef();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -36,11 +36,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6" style={{ backgroundColor: 'white' }}>
+    <section id="contact" className={`py-24 px-6 fade-in ${isVisible ? 'visible' : ''}`}>
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#e6f3ff' }}>
-            <FaRegEnvelope  style={{ color: '#355872' }} />
+            <FaRegEnvelope style={{ color: '#355872' }} />
             <span className="text-sm font-semibold" style={{ color: '#355872' }}>Contact</span>
           </div>
           <h2 className="text-5xl font-black mb-4" style={{ color: '#355872' }}>Contact Me!</h2>
