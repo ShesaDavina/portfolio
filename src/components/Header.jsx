@@ -12,12 +12,10 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo dengan warna #355872 */}
           <h1 className="text-2xl font-bold" style={{ color: '#355872' }}>
             Shesa Davina Putri
           </h1>
 
-          {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8">
             {['about', 'skills', 'education', 'projects', 'certificates', 'contact'].map(item => (
               <button
@@ -39,7 +37,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile Toggle Button - warna #7AAACE */}
           <button
             className="md:hidden p-2 rounded-lg transition-all duration-300"
             style={{ backgroundColor: 'transparent' }}
@@ -53,7 +50,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 pt-4 border-t" style={{ borderColor: '#9CD5FF' }}>
             <nav className="flex flex-col gap-4">

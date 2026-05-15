@@ -88,7 +88,7 @@ export default function Contact() {
             <TextInput
               name="email"
               type="email"
-              placeholder="email@contoh.com"
+              placeholder="youremail@gmail.com"
               required
               className="text-lg"
               style={{
@@ -163,7 +163,6 @@ export default function Contact() {
           </Button>
         </form>
 
-        {/* Informasi kontak tambahan */}
         <div className="text-center mt-8">
           <p className="text-sm" style={{ color: '#7AAACE' }}>
             Atau hubungi saya langsung di shesadavinap03@gmail.com

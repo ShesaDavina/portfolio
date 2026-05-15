@@ -280,7 +280,7 @@ export default function Certificates({ isVisible }) {
                                 </p>
                                 <div className="flex gap-3">
                                     <a
-                                        href="https://www.linkedin.com/in/shesa-davina-putri/"
+                                        href="https://www.linkedin.com/in/shesa-davina-putri/details/certifications/"
                                         target="_blank"
                                         className="flex-1 text-center py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-medium"
                                         style={{ backgroundColor: "#355872", color: "white" }}

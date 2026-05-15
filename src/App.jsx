@@ -10,14 +10,12 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [visibleSections, setVisibleSections] = useState({
-    skills: true, // Set default true dulu untuk test
-  });
+  const [visibleSections, setVisibleSections] = useState({}); // Hapus skills: true
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section[id]');
-      console.log('Found sections:', Array.from(sections).map(s => s.id)); // Debug
+      console.log('Found sections:', Array.from(sections).map(s => s.id));
 
       sections.forEach(section => {
         const rect = section.getBoundingClientRect();
@@ -33,7 +31,7 @@ export default function App() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

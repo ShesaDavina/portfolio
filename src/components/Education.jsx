@@ -30,13 +30,10 @@ export default function Education({ isVisible }) {
         </div>
 
         <div className="relative">
-          {/* Garis tengah vertikal - pakai warna palet */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full hidden md:block" style={{ background: 'linear-gradient(180deg, #355872, #7AAACE, #9CD5FF)' }}></div>
-
           <div className="space-y-12">
             {educationData.map((item, idx) => (
               <div key={idx} className={`flex flex-col md:flex-row ${item.side === 'right' ? 'md:flex-row-reverse' : ''} items-center gap-6 md:gap-12 relative`}>
-                {/* Card */}
                 <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl w-full md:w-5/12 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
                   <div className="flex items-center gap-4 mb-3">
                     <div>
@@ -49,8 +46,6 @@ export default function Education({ isVisible }) {
                   )}
                   <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
-
-                {/* Dot pada garis tengah - pakai warna palet */}
                 <div className="hidden md:block w-5 h-5 rounded-full border-4 border-white shadow-md z-10" style={{ backgroundColor: '#355872' }}></div>
                 <div className="md:hidden w-3 h-3 rounded-full" style={{ backgroundColor: '#7AAACE' }}></div>
               </div>

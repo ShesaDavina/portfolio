@@ -11,7 +11,7 @@ export default function HeroComp() {
   }, []);
 
   return (
-    <section id="home" className="py-24 px-6 min-h-screen overflow-hidden">
+    <section id="home" className="py-30 px-6 min-h-screen overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 items-center gap-12 lg:gap-20">
           <div

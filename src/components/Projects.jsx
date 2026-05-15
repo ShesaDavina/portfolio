@@ -56,27 +56,16 @@ const projects = [
     github: '#',
     live: 'https://rp.mockplus.com/rps/qjSRUR00cP/wSPeEiRG_v?'
   },
-  {
-    title: 'Mengenal Fauna',
-    desc: 'Edukasi fauna',
-    year: '2024',
-    tech: ['HTML', 'CSS'],
-    image: '/images/projects/fauna.png',
-    github: 'https://github.com/ShesaDavina',
-    live: '#'
-  },
 ];
 
 export default function Projects({ isVisible }) {
   const [showAll, setShowAll] = useState(false);
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
-  // Cek apakah project punya GitHub (bukan Figma)
   const hasGithub = (project) => {
     return project.github && project.github !== '#' && !project.tech.includes('Figma');
   };
 
-  // Cek apakah project punya Live Demo
   const hasLive = (project) => {
     return project.live && project.live !== '#';
   };
@@ -155,7 +144,6 @@ export default function Projects({ isVisible }) {
                     </a>
                   )}
 
-                  {/* Tombol Live Demo - untuk Figma atau project dengan link live */}
                   {hasLive(project) && (
                     <a
                       href={project.live}
@@ -187,7 +175,6 @@ export default function Projects({ isVisible }) {
                     </a>
                   )}
 
-                  {/* Jika tidak ada GitHub dan tidak ada Live, tampilkan pesan */}
                   {!hasGithub(project) && !hasLive(project) && (
                     <div className="flex-1 text-center py-2 rounded-lg text-sm" style={{ backgroundColor: '#f0f0f0', color: '#9CD5FF' }}>
                       Coming Soon

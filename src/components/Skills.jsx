@@ -9,6 +9,8 @@ const programmingSkills = [
   { name: 'PHP', icon: '/images/skills/php.png' },
   { name: 'Bootstrap', icon: '/images/skills/bs.png' },
   { name: 'Tailwind CSS', icon: '/images/skills/tl.png' },
+  { name: 'Flutter', icon: '/images/skills/flutter.png' },
+  { name: 'Express.js', icon: '/images/skills/exp.png' },
 ];
 
 const toolsFrameworks = [
@@ -17,11 +19,13 @@ const toolsFrameworks = [
   { name: 'GitHub', icon: '/images/skills/github.png' },
   { name: 'Postman', icon: '/images/skills/postman.png' },
   { name: 'MySQL', icon: '/images/skills/mysql.png' },
+  { name: 'PostgreSQL', icon: '/images/skills/psgre.png' },
+  { name: 'MongoDB', icon: '/images/skills/mongo.png' },
 ];
 
 export default function Skills({ isVisible }) {
   return (
-    <section id="skills" className={`py-20 px-6 fade-in ${isVisible ? 'visible' : ''}`}>
+    <section id="skills" className={`py-24 px-6 fade-in ${isVisible ? 'visible' : ''}`}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -32,7 +36,6 @@ export default function Skills({ isVisible }) {
           <h2 className="text-4xl md:text-5xl font-black" style={{ color: '#355872' }}>Skills & Technologies</h2>
         </div>
 
-        {/* Programming & Frameworks */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-center mb-8" style={{ color: '#7AAACE' }}>Programming & Frameworks</h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -57,7 +60,6 @@ export default function Skills({ isVisible }) {
           </div>
         </div>
 
-        {/* Tools & Libraries */}
         <div>
           <h3 className="text-2xl font-bold text-center mb-8" style={{ color: '#7AAACE' }}>Tools & Libraries</h3>
           <div className="flex flex-wrap justify-center gap-4">

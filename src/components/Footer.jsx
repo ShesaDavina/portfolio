@@ -7,17 +7,15 @@ export default function Footer() {
     <footer className="border-t py-16 px-6" style={{ backgroundColor: 'white', borderColor: '#e6f3ff' }}>
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
-          {/* Bagian 1 - Bio */}
           <div>
             <h3 className="text-3xl font-black mb-4" style={{ color: '#355872' }}>
               Shesa Davina
             </h3>
             <p className="leading-relaxed" style={{ color: '#7AAACE' }}>
-              Frontend Developer passionate about creating amazing digital experiences.
+              Junior Fullstack Developer passionate about creating amazing digital experiences.
             </p>
           </div>
 
-          {/* Bagian 2 - Links */}
           <div>
             <h4 className="text-xl font-bold mb-6" style={{ color: '#355872' }}>Links</h4>
             <ul className="space-y-3">
@@ -79,7 +77,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Bagian 3 - Social Media */}
           <div>
             <h4 className="text-xl font-bold mb-6" style={{ color: '#355872' }}>Social</h4>
             <div className="flex flex-col gap-3">
@@ -131,7 +128,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Bagian 4 - Contact Info */}
           <div>
             <h4 className="text-xl font-bold mb-6" style={{ color: '#355872' }}>Contact</h4>
             <div className="space-y-2" style={{ color: '#7AAACE' }}>
@@ -144,7 +140,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="pt-8 text-center text-sm" style={{ borderTop: `1px solid #e6f3ff`, color: '#355872' }}>
-          © 2026 Shesa Davina Putri. All rights reserved.
+          © 2026 Shesa Davina Putri.
         </div>
       </div>
     </footer>
