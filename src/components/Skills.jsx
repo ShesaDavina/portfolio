@@ -20,7 +20,6 @@ const toolsFrameworks = [
   { name: 'Postman', icon: '/images/skills/postman.png' },
   { name: 'MySQL', icon: '/images/skills/mysql.png' },
   { name: 'PostgreSQL', icon: '/images/skills/psgre.png' },
-  { name: 'MongoDB', icon: '/images/skills/mongo.png' },
 ];
 
 export default function Skills({ isVisible }) {
