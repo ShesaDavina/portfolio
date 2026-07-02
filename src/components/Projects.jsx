@@ -9,7 +9,7 @@ const projects = [
     year: '2026',
     tech: ['React', 'Tailwind', 'Laravel', 'MySQL'],
     image: '/images/projects/ath2.png',
-    github: 'https://github.com/ShesaDavina/athletica-frontend.git',
+    github: 'https://github.com/ShesaDavina/athletica-frontend',
     live: '#',
     fullDesc: 'Platform manajemen gym berbasis web untuk booking kelas, pembelian membership, dan pengelolaan operasional gym. Mendukung role Admin, Trainer, dan Member, dilengkapi dengan pembayaran Midtrans, tiket QR Code, ekspor PDF & Excel, serta dashboard manajemen data.'
   },
@@ -20,7 +20,7 @@ const projects = [
     year: '2026',
     tech: ['React', 'Tailwind', 'Laravel', 'MySQL'],
     image: '/images/projects/foodwise.png',
-    github: 'https://github.com/ShesaDavina/foodwise-app.git',
+    github: 'https://github.com/ShesaDavina/foodwise-app',
     live: '#',
     fullDesc: 'Aplikasi pencatatan makanan yang membantu mengurangi food waste dengan fitur pengingat terintegrasi Google Calendar. Dibangun dengan React untuk frontend dan Laravel untuk backend.'
   },
@@ -31,7 +31,7 @@ const projects = [
     year: '2026',
     tech: ['React', 'Vite', 'Tailwind'],
     image: '/images/projects/bookku.png',
-    github: 'https://github.com/ShesaDavina',
+    github: 'https://github.com/ShesaDavina/bookku',
     live: '#',
     fullDesc: 'E-commerce buku online modern yang terintegrasi dengan public API, dengan fitur keranjang dan checkout.'
   },
@@ -42,7 +42,7 @@ const projects = [
     year: '2025',
     tech: ['Laravel', 'Bootstrap', 'MySQL'],
     image: '/images/projects/athletica.png',
-    github: 'https://github.com/ShesaDavina',
+    github: 'https://github.com/ShesaDavinaP/athletica',
     live: '#',
     fullDesc: 'Platform booking kelas dan pengelolaan jadwal gym khusus wanita. Terdapat role Admin, Trainer, dan Member. Terdapat juga pembuatan tiket kode QR, fungsi ekspor PDF dan Excel.'
   },
@@ -86,7 +86,7 @@ const projects = [
     year: '2025',
     tech: ['HTML', 'CSS'],
     image: '/images/projects/fauna.png',
-    github: 'https://github.com/ShesaDavina',
+    github: 'https://github.com/ShesaDavinaP/mengenal-fauna',
     live: '#',
     fullDesc: 'Website edukasi interaktif yang mengenalkan berbagai fauna yang ada di Taman Safari Bogor.'
   },
@@ -97,7 +97,7 @@ const projects = [
     year: '2025',
     tech: ['HTML', 'CSS', 'Javascript'],
     image: '/images/projects/kalku.png',
-    github: 'https://github.com/ShesaDavina',
+    github: 'https://github.com/ShesaDavinaP/kalkulator-matematika',
     live: '#',
     fullDesc: 'Kalkulator multifungsi untuk perhitungan aritmatika dasar dan rumus geometri.'
   },
